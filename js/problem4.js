@@ -26,4 +26,39 @@
 
 */
 
-// Write your JavaScript here
+function changeElementText(element, answer){
+    $(element).text(answer);
+}
+
+function displayGivenNotes(notes){
+    var givenNotes = "";
+    for (var i = 0; i < notes.length; i++) {
+             givenNotes += notes[i];
+            if(i != notes.length-1)
+                givenNotes +=", ";
+        }
+    changeElementText("#givenNotes", givenNotes);
+}
+
+function isValidDenomination(currencyNote, validDenominations){
+    for(var i = 0; i < validDenominations.length; i++){
+        if(currencyNote == validDenominations[i])
+            return true;
+    }
+    return false;
+}
+
+function getValidDenominations(){
+    return [5, 10, 20, 50, 100, 500, 1000];
+}
+
+function getTotalRs(){
+    displayGivenNotes(arguments);
+    var validDenominations = getValidDenominations();
+    var total = 0;
+    for (var i = 0; i < arguments.length; i++) {
+        if(!isValidDenomination(arguments[i], validDenominations)){break;}
+        total += arguments[i];
+    }
+    changeElementText("#total", total)
+}
