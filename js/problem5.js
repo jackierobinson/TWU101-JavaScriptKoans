@@ -57,12 +57,12 @@ function getCount(hindiText, urduText, englishText){
     return hindiText.length + urduText.length + englishText.length ;
 }
 
-function restructureAd(hindiText, urduText, englishText){
-    var ad = {text: ""};
-    addTextToAd(hindiText, ad);
-    reverseArray(urduText);
-    addTextToAd(urduText, ad);
-    addTextToAd(englishText, ad);
-    changeElementText("#ad", ad.text);
-    changeElementText("#count", getCount(hindiText, urduText, englishText));
+function restructureAd(ad){
+    var newAd = {text: ""};
+    addTextToAd(ad[0], newAd);
+    reverseArray(ad[1]);
+    addTextToAd(ad[1], newAd);
+    addTextToAd(ad[2], newAd);
+    changeElementText("#ad", newAd.text);
+    changeElementText("#count", getCount(ad[0], ad[1], ad[2]));
 }

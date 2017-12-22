@@ -13,10 +13,16 @@ $(document).ready(function() {
     // call your problem 4 code here
 
     // Problem 5
+    var ad =
+    [
+        ["zara", "dhyaan", "dein"],
+        ["mazarat", "chahenge"],
+        ["attention", "please"]
+    ]
     var hindiText = ["zara", "dhyaan", "dein"];
     var urduText = ["mazarat", "chahenge"];
     var englishText = ["attention", "please"];
-    restructureAd(hindiText, urduText, englishText);
+    restructureAd(ad);
     // call your problem 5 code here
 
 });
