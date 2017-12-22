@@ -19,10 +19,6 @@ $(document).ready(function() {
         ["mazarat", "chahenge"],
         ["attention", "please"]
     ]
-    var hindiText = ["zara", "dhyaan", "dein"];
-    var urduText = ["mazarat", "chahenge"];
-    var englishText = ["attention", "please"];
     restructureAd(ad);
-    // call your problem 5 code here
-
+    updateCount(ad);
 });

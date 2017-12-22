@@ -68,5 +68,8 @@ function restructureAd(ad){
         addTextToAd(ad[i], newAd);
     }
     changeElementText("#ad", newAd.text);
+}
+
+function updateCount(ad){
     changeElementText("#count", getCount(ad));
 }
