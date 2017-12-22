@@ -37,7 +37,7 @@ function changeElementText(element, answer) {
     $(element).text(answer);
 }
 
-function reverseArray(array){
+function reverseText(array){
     var temp = [];
     for(var i = array.length-1; i >= 0; i--){
         temp.push(array[i]);
@@ -63,10 +63,10 @@ function getCount(ad){
 
 function restructureAd(ad){
     var newAd = {text: ""};
-    addTextToAd(ad[0], newAd);
-    reverseArray(ad[1]);
-    addTextToAd(ad[1], newAd);
-    addTextToAd(ad[2], newAd);
+    reverseText(ad[1]);
+    for(var i = 0; i < ad.length; i++){
+        addTextToAd(ad[i], newAd);
+    }
     changeElementText("#ad", newAd.text);
     changeElementText("#count", getCount(ad));
 }
