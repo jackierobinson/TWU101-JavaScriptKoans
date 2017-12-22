@@ -33,4 +33,36 @@
      count: 7
  */
 
-// Write your JavaScript here
+function changeElementText(element, answer) {
+    $(element).text(answer);
+}
+
+function reverseArray(array){
+    var temp = [];
+    for(var i = array.length-1; i >= 0; i--){
+        temp.push(array[i]);
+    }
+    for(var i = 0; i < array.length; i++){
+        array[i] = temp[i];
+    }
+}
+
+function addTextToAd(text, ad){
+    for(var i = 0; i < text.length; i++){
+        ad.text += text[i] + " ";
+    }
+}
+
+function getCount(hindiText, urduText, englishText){
+    return hindiText.length + urduText.length + englishText.length ;
+}
+
+function restructureAd(hindiText, urduText, englishText){
+    var ad = {text: ""};
+    addTextToAd(hindiText, ad);
+    reverseArray(urduText);
+    addTextToAd(urduText, ad);
+    addTextToAd(englishText, ad);
+    changeElementText("#ad", ad.text);
+    changeElementText("#count", getCount(hindiText, urduText, englishText));
+}
