@@ -19,6 +19,7 @@ $(document).ready(function() {
         ["mazarat", "chahenge"],
         ["attention", "please"]
     ]
+    displayOriginalAd(ad);
     restructureAd(ad);
     updateCount(ad);
 });

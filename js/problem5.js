@@ -61,6 +61,12 @@ function getCount(ad){
     return count;
 }
 
+function displayOriginalAd(ad){
+     changeElementText("#hindi", ad[0].join(" "));
+     changeElementText("#urdu", ad[1].join(" "));
+     changeElementText("#english", ad[2].join(" "));
+}
+
 function restructureAd(ad){
     var newAd = {text: ""};
     reverseText(ad[1]);
