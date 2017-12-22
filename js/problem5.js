@@ -53,8 +53,12 @@ function addTextToAd(text, ad){
     }
 }
 
-function getCount(hindiText, urduText, englishText){
-    return hindiText.length + urduText.length + englishText.length ;
+function getCount(ad){
+    var count = 0;
+    for(var i = 0; i < ad.length; i++){
+        count += ad[i].length
+    }
+    return count;
 }
 
 function restructureAd(ad){
@@ -64,5 +68,5 @@ function restructureAd(ad){
     addTextToAd(ad[1], newAd);
     addTextToAd(ad[2], newAd);
     changeElementText("#ad", newAd.text);
-    changeElementText("#count", getCount(ad[0], ad[1], ad[2]));
+    changeElementText("#count", getCount(ad));
 }
