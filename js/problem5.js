@@ -48,9 +48,7 @@ function reverseText(array){
 }
 
 function addTextToAd(text, ad){
-    for(var i = 0; i < text.length; i++){
-        ad.text += text[i] + " ";
-    }
+    ad.text += text.join(" ") + " ";
 }
 
 function getCount(ad){
