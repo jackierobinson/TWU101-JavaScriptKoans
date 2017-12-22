@@ -45,7 +45,7 @@ function fareForRide(distanceTraveled, timeWaiting, isNight) {
         changeElementText("#nightOrDay", "night");
     else
         changeElementText("#nightOrDay", "day");
-    var fare = 20 + 8 * (distanceTraveled-1) + 4 * timeWaiting;;
+    var fare = 20 + 8 * (distanceTraveled-1) + 4 * timeWaiting;
     if (isNight)
         fare = fare + fare * .5;
     changeElementText("#fare", fare);
